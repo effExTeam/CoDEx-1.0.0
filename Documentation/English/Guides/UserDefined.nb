@@ -1,0 +1,387 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10321,        379]
+NotebookOptionsPosition[      7415,        276]
+NotebookOutlinePosition[      7840,        293]
+CellTagsIndexPosition[      7797,        290]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["0.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["CoDEx", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["CoDEx`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["CoDEx/guide/UserDefined", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
+
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->795394057],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->802101],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->509823116],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->199884516],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->463951815],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->8237523],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->813936640],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["UserDefined", "GuideTitle",
+ CellID->942062912],
+
+Cell[TextData[StyleBox["A file where user writes the model details.", \
+"MathCaption"]], "GuideAbstract",
+ CellChangeTimes->{{3.7332853624696074`*^9, 3.7332854190943613`*^9}},
+ CellID->2001916300],
+
+Cell["\<\
+On loading package CoDEx, one has to import model specifications from \
+UserDefined.m file saved in some directory.\
+\>", "GuideAbstract",
+ CellChangeTimes->{{3.733285631469042*^9, 3.733285656861887*^9}, {
+  3.7332857989078207`*^9, 3.733285875398065*^9}, {3.733285935285365*^9, 
+  3.733285999982745*^9}},
+ CellID->1912883879]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The variables in UserDefined :", "GuideFunctionsSection",
+ CellChangeTimes->{{3.733285590920685*^9, 3.733285629590724*^9}, {
+  3.7332860163585043`*^9, 3.733286025891879*^9}, {3.733286258401063*^9, 
+  3.73328627485296*^9}},
+ CellID->1866139230],
+
+Cell[TextData[{
+ ButtonBox["flnum",
+  BaseStyle->"Link",
+  ButtonData->"paclet:CoDEx/ref/flnum"],
+ " \[LongDash] Total number of heavy multiplet you wish to integrate out."
+}], "GuideText",
+ CellChangeTimes->{{3.73328603221618*^9, 3.733286049334043*^9}, {
+  3.7332860813843193`*^9, 3.733286095178986*^9}, {3.733287411081999*^9, 
+  3.733287411197391*^9}},
+ CellID->203374175],
+
+Cell[TextData[{
+ ButtonBox["flname",
+  BaseStyle->"Link",
+  ButtonData->"paclet:CoDEx/ref/flname"],
+ " \[LongDash] Write names for each multiplet. You will use this names while \
+constructing the model Lagrangian."
+}], "GuideText",
+ CellChangeTimes->{{3.7332861007407703`*^9, 3.73328615954346*^9}, {
+  3.733287430581037*^9, 3.733287430820284*^9}},
+ CellID->1463276848],
+
+Cell[TextData[{
+ ButtonBox["flcompnum",
+  BaseStyle->"Link",
+  ButtonData->"paclet:CoDEx/ref/flcompnum"],
+ " - Write the number of fields which constitutes the multiplet. For example, \
+for doublet heavy field, flcompnum is 2."
+}], "GuideText",
+ CellChangeTimes->{{3.733286161254368*^9, 3.733286239705158*^9}, {
+  3.733287445791144*^9, 3.733287446100294*^9}},
+ CellID->845881154],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["flrepre",
+   BaseStyle->"Link",
+   ButtonData->"paclet:CoDEx/ref/flrepre"]], "InlineFormula"],
+ " - It is a list with three elements. First, second and third elements are \
+color, isospin and ",
+ Cell[BoxData[
+  RowBox[{"U", 
+   SubscriptBox[
+    RowBox[{"(", "1", ")"}], "Y"]}]], "InlineFormula"],
+ " quantum numbers respectively."
+}], "GuideText",
+ CellChangeTimes->{{3.733286245596961*^9, 3.733286255873416*^9}, {
+  3.733286368302*^9, 3.733286440867813*^9}, {3.733287450407675*^9, 
+  3.73328745126623*^9}},
+ CellID->635143289],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["flch",
+   BaseStyle->"Link",
+   ButtonData->"paclet:CoDEx/ref/flch"]], "InlineFormula"],
+ " - It is a list with three elements. First, second and third elements are \
+spin, mass and ",
+ Cell[BoxData[
+  RowBox[{"U", 
+   SubscriptBox[
+    RowBox[{"(", "1", ")"}], "Y"]}]], "InlineFormula"],
+ " quantum number respectively. "
+}], "GuideText",
+ CellChangeTimes->{{3.733286454674876*^9, 3.733286534710082*^9}, {
+  3.7332874565725*^9, 3.733287457196847*^9}},
+ CellID->1649343231],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["isogen",
+   BaseStyle->"Link",
+   ButtonData->"paclet:CoDEx/ref/isogen"]], "InlineFormula"],
+ " - It is function with two arguments. The first argument is for heavy \
+multiplet index. The second argument is for generator index. Matrix \
+representation of isospin symmetry generator for each heavy multiplet is \
+defined in it."
+}], "GuideText",
+ CellChangeTimes->{{3.7332865461377707`*^9, 3.73328675444776*^9}, {
+  3.733286890120623*^9, 3.7332870151481323`*^9}, {3.733287496482918*^9, 
+  3.7332874972897*^9}},
+ CellID->2075697678],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["colgen",
+   BaseStyle->"Link",
+   ButtonData->"paclet:CoDEx/ref/colgen"]], "InlineFormula"],
+ " - It is function with two arguments. The first argument is for heavy \
+multiplet index. The second argument is for generator index. Matrix \
+representation of color symmetry generator for each heavy multiplet is \
+defined in it."
+}], "GuideText",
+ CellChangeTimes->{{3.733286666313723*^9, 3.733286668975515*^9}, {
+  3.733287021689979*^9, 3.733287028108923*^9}, {3.7332875125848494`*^9, 
+  3.733287513414884*^9}},
+ CellID->1148871145],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell[TextData[ButtonBox["BuildLagrangian",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:CoDEx/guide/BuildLagrangian"]], "InlineGuideFunctionListing",
+ CellChangeTimes->{{3.733286328716827*^9, 3.733286343970849*^9}},
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "GuideTutorialsSection",
+ CellID->415694126],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->806871991],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->1885805579]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "GuideMoreAboutSection",
+ CellID->23220180],
+
+Cell[TextData[ButtonBox["BuildLagrangian",
+ BaseStyle->"Link",
+ ButtonData->"paclet:CoDEx/guide/BuildLagrangian"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.733286309833065*^9, 3.733286313240369*^9}, {
+  3.733287294500766*^9, 3.733287294614649*^9}},
+ CellID->1567025153]
+}, Open  ]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->415694148]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[908, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[979, 41, 78, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 78, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1141, 49, 75, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1219, 53, 68, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1324, 59, 56, 1, 19, "KeywordsSection",
+ CellID->1427428552],
+Cell[1383, 62, 45, 1, 70, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1465, 68, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1521, 71, 63, 2, 70, "Details",
+ CellID->795394057],
+Cell[1587, 75, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[1659, 79, 63, 2, 70, "Details",
+ CellID->802101],
+Cell[1725, 83, 71, 2, 70, "Details",
+ CellID->509823116],
+Cell[1799, 87, 61, 2, 70, "Details",
+ CellID->199884516],
+Cell[1863, 91, 61, 2, 70, "Details",
+ CellID->463951815],
+Cell[1927, 95, 61, 2, 70, "Details",
+ CellID->8237523],
+Cell[1991, 99, 78, 2, 70, "Details",
+ CellID->813936640],
+Cell[2072, 103, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2176, 110, 53, 1, 77, "GuideTitle",
+ CellID->942062912],
+Cell[2232, 113, 196, 3, 27, "GuideAbstract",
+ CellID->2001916300],
+Cell[2431, 118, 335, 7, 43, "GuideAbstract",
+ CellID->1912883879]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2803, 130, 249, 4, 70, "GuideFunctionsSection",
+ CellID->1866139230],
+Cell[3055, 136, 374, 9, 22, "GuideText",
+ CellID->203374175],
+Cell[3432, 147, 368, 9, 38, "GuideText",
+ CellID->1463276848],
+Cell[3803, 158, 379, 9, 38, "GuideText",
+ CellID->845881154],
+Cell[4185, 169, 573, 16, 42, "GuideText",
+ CellID->635143289],
+Cell[4761, 187, 517, 15, 42, "GuideText",
+ CellID->1649343231],
+Cell[5281, 204, 574, 13, 57, "GuideText",
+ CellID->2075697678],
+Cell[5858, 219, 573, 13, 57, "GuideText",
+ CellID->1148871145],
+Cell[CellGroupData[{
+Cell[6456, 236, 48, 1, 26, "GuideDelimiter",
+ CellID->311258892],
+Cell[6507, 239, 233, 5, 20, "InlineGuideFunctionListing",
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6789, 250, 62, 1, 72, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[6854, 253, 49, 1, 22, "GuideTutorial",
+ CellID->806871991],
+Cell[6906, 256, 50, 1, 22, "GuideTutorial",
+ CellID->1885805579]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6993, 262, 62, 1, 72, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[7058, 265, 269, 5, 22, "GuideMoreAbout",
+ CellID->1567025153]
+}, Open  ]],
+Cell[7342, 273, 69, 1, 72, "GuideRelatedLinksSection",
+ CellID->415694148]
+}
+]
+*)
+
