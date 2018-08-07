@@ -1,0 +1,5 @@
+# Specifies intentionally untracked files that Git should ignore
+*~
+
+# Ignore desktop.ini files
+*.ini
