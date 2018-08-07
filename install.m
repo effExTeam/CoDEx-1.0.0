@@ -30,7 +30,7 @@ AutoDisableInsufficientVersionWarning::usage="option of InstallCoDEx. If set to 
 CoDExDevelopmentVersionLink::usage="option of InstallCoDEx. It specifies the url to the main repository of CoDEx. This repository is used to install the development version of CoDEx.";
 CoDExStableVersionLink::usage="option of InstallCoDEx. It specifies the url to the latest stable release of CoDEx.";
 InstallCoDExDevelopmentVersion::usage="option of InstallCoDEx. If set to True, the installer will download the latest development version of CoDEx from the git repository. Otherwise it will install the latest stable version.";
-InstallCoDExTo::usage="option of InstallCoDEx. It specifies, the full path to the directory where CoDEx will be installed.";
+InstallCoDExTo::usage="option of InstallCoDEx. It specifies the full path to the directory where CoDEx will be installed.";
 
 
 (* ::Input::Initialization:: *)
@@ -58,7 +58,7 @@ Module[{unzipDir,tmpzip,gitzip,packageName,packageDir,fullPath,strDisableWarning
 			OptionValue[CoDExStableVersionLink]];
 	packageName="CoDEx";
 	packageDir=OptionValue[InstallCoDExTo];
-	strDisableWarning="To make the documentation work, we need to disable the warning that appears when you open a notebook that was created with a newer Mathematica version.
+	strDisableWarning="We need to disable the warning that appears when you open a notebook that was created with a newer Mathematica version.
 			Otherwise this warning will pop up every time you use the Documentation Center to read info on CoDEx functions in older Mathematica versions.
 			This setting is harmless and can be always undone via \"SetOptions[$FrontEnd, MessageOptions -> {\"InsufficientVersionWarning\" -> True}]\".
 			Should we do this now?";
