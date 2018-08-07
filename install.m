@@ -49,7 +49,7 @@ InstallCoDExQuiet[]:=InstallCoDEx[AutoDisableInsufficientVersionWarning->True,Au
 
 
 (* ::Input::Initialization:: *)
-Options[InstallCoDEx]={AutoDisableInsufficientVersionWarning->None,AutoOverwriteCoDExDirectory->None,CoDExDevelopmentVersionLink->"https://github.com/effExTeam/CoDEx-1.0.0/raw/master/CoDEx.zip",CoDExStableVersionLink->"https://github.com/effExTeam/CoDEx-1.0.0/raw/master/CoDEx.zip",InstallCoDExDevelopmentVersion->False,InstallCoDExTo->FileNameJoin[{$UserBaseDirectory,"Applications","CoDEx"}]};
+Options[InstallCoDEx]={AutoDisableInsufficientVersionWarning->None,AutoOverwriteCoDExDirectory->None,CoDExDevelopmentVersionLink->"https://github.com/effExTeam/CoDEx-1.0.0/raw/master/CoDEx.zip",CoDExStableVersionLink->"https://github.com/effExTeam/CoDEx-1.0.0/raw/master/latest/CoDEx.zip",InstallCoDExDevelopmentVersion->False,InstallCoDExTo->FileNameJoin[{$UserBaseDirectory,"Applications","CoDEx"}]};
 
 InstallCoDEx[OptionsPattern[]]:=
 Module[{unzipDir,tmpzip,gitzip,packageName,packageDir,fullPath,strDisableWarning,CDGetUrl,(*configFileProlog,*)strOverwriteCDdit,zipDir},
