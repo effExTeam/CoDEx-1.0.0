@@ -20,7 +20,7 @@
 
 
 (* ::Input::Initialization:: *)
-InstallCoDEx::notcomp="Your Mathematica version is older than 9. Installation aborted!";
+InstallCoDEx::notcomp="Your Mathematica version is older than 10. Installation aborted!";
 InstallCoDEx::failed="Download of `1` failed. Installation aborted!";
 
 
@@ -66,7 +66,7 @@ Module[{unzipDir,tmpzip,gitzip,packageName,packageDir,fullPath,strDisableWarning
 			If you are using any custom configuration files or add-ons that are located in that directory, please backup them in advance.";
 	(*configFileProlog="(*Here you can put some commands and settings to be evaluated on every start of CoDEx. \n
 			This allows you to customize your CoDEx installation to fit your needs best.*)";*)
-	If[$VersionNumber<9,Message[InstallCoDEx::notcomp];Abort[]];
+	If[$VersionNumber<10,Message[InstallCoDEx::notcomp];Abort[]];
 	CDGetUrl[x_]:=URLSave[x,CreateTemporary[]];
 
 	(*If the package directory already exists,ask the user about overwriting*)
