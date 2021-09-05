@@ -1,7 +1,0 @@
-# Specifies intentionally untracked files that Git should ignore
-*~
-
-# Ignore desktop.ini files
-*.ini
-.DS_Store
-.gitignore
